@@ -16,13 +16,13 @@ int print_rot13(va_list args)
 	if (c == NULL)
 		return (write(1, "(null)", 6));
 
-	for (;c[i] != '\0'; i++)
+	for (; c[i] != '\0'; i++)
 	{
 		rot = c[i];
 		if (c[i] >= 'a' && c[i] <= 'z')
-			rot = (c[i] - 'a' + 13) %26 + 'a';
+			rot = (c[i] - 'a' + 13) % 26 + 'a';
 		if (c[i] >= 'A' && c[i] <= 'Z')
-			rot = (c[i] - 'A' + 13) %26 + 'A';
+			rot = (c[i] - 'A' + 13) % 26 + 'A';
 		printed_chars += write(1, &rot, 1);
 	}
 	return (printed_chars);

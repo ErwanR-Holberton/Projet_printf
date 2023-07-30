@@ -19,7 +19,7 @@ int print_reverse(va_list args)
 		i++;
 
 	i--;
-	for (;i >= 0; i--)
+	for (; i >= 0; i--)
 		printed_characters += write(1, &c[i], 1);
 
 	return (printed_characters);

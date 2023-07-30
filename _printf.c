@@ -2,9 +2,7 @@
 
 /**
  * _printf - write a string with multiple variables
- *
  * @format: the list of chars & variables to print
- *
  * Return: the number of characters printed or failure code
  */
 
@@ -12,9 +10,8 @@ int _printf(const char *format, ...)
 {
 	f_struct pair_char_and_func[] = {{'c', print_char}, {'s', print_string},
 	{'d', print_decimal}, {'i', print_decimal}, {'u', print_unsigned},
-	{'o', print_oct}, {'x', print_hexa}, {'X', print_heXa},
-	{'p', print_pointer}, {'b', print_binary}, {'r', print_reverse},
-	{'R', print_rot13}};
+	{'o', print_oct}, {'x', print_hexa}, {'X', print_heXa}, {'p', print_pointer}
+	, {'b', print_binary}, {'r', print_reverse}, {'R', print_rot13}};
 	va_list args;
 	int i = 0, j, length = 0;
 
